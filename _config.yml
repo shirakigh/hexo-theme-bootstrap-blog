@@ -1,35 +1,51 @@
 # Header
-navbar_brand: false
+navbar_brand: 可愛いを叫ぶブログ
 menu:
-  Home: index.html
-  Archives: archives/
-rss: /atom.xml
+  - title: Archives
+    url: archives
+    intro: "All the articles."
+    icon: "fa fa-archive"
+  - title: Categories
+    url: categories
+    intro: "All the categories."
+    icon: "fa fa-folder"
+  - title: Tags
+    url: tags
+    intro: "All the tags."
+    icon: "fa fa-tags"
+  - title: About
+    url: about
+    intro: "About me."
+    icon: "fa fa-user"
+  # Home: index.html
+  # Archives: archives/
+  # Categories: categories/
+  # Tags: tags/
+  # About: about/
+rss: /sblog/atom.xml
 
 # Content
 excerpt_link: Read More
-fancybox: false
+fancybox: true
 
 # Sidebar
 widgets:
 - about         # See also: `about_content`
+- recent_posts
 - category
-- tag
 - tagcloud
 - archive
-- recent_posts
 about_widget_content: >
-  <p>Etiam porta <em>sem malesuada magna</em> mollis euismod.
-  Cras mattis consectetur purus sit amet fermentum. Aenean
-  lacinia bibendum nulla sed consectetur.</p>
+  <p>しらきが可愛いと思うものを可愛いと叫ぶためのブログです。</p>
 
 # widget behavior
 archive_type: 'monthly'
 show_count: true
 
 # Miscellaneous
-google_analytics:
-favicon:
-twitter_id:
+google_analytics: UA-84876135-2
+favicon: favicon.ico
+twitter_id: '@shiraki_ii'
 google_plus:
 fb_admins:
 fb_app_id:

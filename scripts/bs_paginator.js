@@ -9,7 +9,8 @@ function bsPaginatorHelper(options){
   var endSize = options.hasOwnProperty('end_size') ? +options.end_size : 1;
   var midSize = options.hasOwnProperty('mid_size') ? +options.mid_size : 2;
   var space = options.hasOwnProperty('space') ? options.space : '&hellip;';
-  var base = options.base || this.page.base || this.config.root || '';
+  // var base = options.base || this.page.base || this.config.root || '';
+  var base = options.base || this.page.base || '';
   var format = options.format || this.config.pagination_dir + '/%d/';
   var prevText = options.prev_text || 'Prev';
   var nextText = options.next_text || 'Next';

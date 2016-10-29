@@ -11,7 +11,7 @@
 /* Globals */
 
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Arial, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
   color: #555;
 }
 
@@ -22,14 +22,30 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
   margin-top: 1em;
-  margin-bottom: 15px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: normal;
+  margin-bottom: 1.5em;
+  font-family: Arial, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+  font-weight: bold;
   color: #333;
 }
 
+.archive-article h1 {
+  font-size: 15px;
+}
+
+.archive-article {
+  margin: 5px 0;
+}
+
+h3 {
+  padding: .25em 0 .25em .5em;
+  border-left: 8px solid #80CEDD;
+  font-size: 20px;
+  margin-bottom: 1em;
+  margin-top: 1.5em;
+}
+
 p {
-  margin: 0 0 15px;
+  margin-bottom: 1.9em;
 }
 
 code {
@@ -63,38 +79,45 @@ code {
  */
 
 .navbar {
-  background-color: #428bca;
-  -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
-          box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+  background-color: #ffada0;
 }
 
 .navbar-inverse { border: 0; }
 
 .navbar-inverse .navbar-toggle {
-  border-color: #cdddeb;
+  border-color: #d36d64;
 }
 .navbar-inverse .navbar-toggle .icon-bar {
-  background-color: #cdddeb;
+  background-color: #d36d64;
 }
 
 .navbar-inverse .navbar-toggle:focus,
 .navbar-inverse .navbar-toggle:hover {
-  background-color: #65A2D6;
+  background-color: #d36d64;
 }
 
 .navbar-inverse .navbar-brand,
 .navbar-inverse .navbar-nav>li>a {
-  color: #cdddeb;
+  color: #fff;
   font-weight: 500;
 }
 
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
-  border-color: #cdddeb;
+  border-color: #d36d64;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+  color: #d36d64;
 }
 
 .navbar-inverse .navbar-nav>li>a.active {
   color: #fff;
+}
+
+.navbar-brand {
+  height: 40px;
+  padding: 10px 15px;
 }
 
 @media (min-width: 768px) {
@@ -114,7 +137,7 @@ code {
   }
   /** ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 
-  .navbar-inverse .navbar-nav>li>a.active:after {
+  /*.navbar-inverse .navbar-nav>li>a.active:after {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -126,7 +149,7 @@ code {
     border-right: 5px solid transparent;
     border-bottom: 5px solid;
     border-left: 5px solid transparent;
-  }
+  }*/
 }
 
 /*
@@ -139,7 +162,7 @@ code {
 .blog-title {
   margin-top: 30px;
   margin-bottom: 0;
-  font-size: 60px;
+  font-size: 32px;
   font-weight: normal;
 }
 .blog-description {
@@ -147,13 +170,28 @@ code {
   color: #999;
 }
 
+.site-logo {
+    border-radius: 50%;
+    zoom: 90%;
+}
+
+.site-logo, .blog-title {
+    display: inline-block;
+    padding-bottom: 0;
+    /*padding-right: 8px;*/
+    line-height: 1;
+    margin-bottom: 10px;
+    margin-top: 0;
+    vertical-align: middle;
+}
+
 /*
  * Main column and sidebar layout
  */
 
 .blog-main {
-  font-size: 18px;
-  line-height: 1.5;
+  font-size: 15px;
+  line-height: 1.7;
 }
 .blog-main > article:last-of-type {
   margin-bottom: 30px;
@@ -199,6 +237,7 @@ code {
 .article-header h1 {
   margin-top: 0;
   margin-bottom: 5px;
+  font-size: 24px;
 }
 .article-header h1 a {
   color: #333;
@@ -308,4 +347,80 @@ code {
 }
 .blog-footer p:last-child {
   margin-bottom: 0;
+}
+
+/*
+ * Tag Box
+ */
+
+.tag_box {
+  margin:0;
+  overflow:hidden;
+}
+.tag_box li {
+  line-height:28px;
+}
+.tag_box li i {
+  opacity:0.9;
+}
+.tag_box.inline li {
+  float:left;
+}
+.tag_box a {
+  padding: 2px 6px;
+  margin: 2px;
+  background: #e5e5e5;
+  color:#555;
+  border-radius: 3px;
+  text-decoration:none;
+  border:1px dashed #bbb;
+}
+.tag_box a span{
+  vertical-align:super;
+  font-size:0.8em;
+}
+.tag_box a:hover {
+  background-color:#397bdd;
+  color:#FFF;
+}
+.tag_box a.active {
+  background:#57A957;
+  border:1px solid #4C964D;
+  color:#FFF;
+}
+
+/*
+ * Responsive Table
+ */
+
+@media screen and (max-width: 767px) {
+  .table-responsive>.table>tbody>tr>td,
+  .table-responsive>.table>tbody>tr>th,
+  .table-responsive>.table>tfoot>tr>td,
+  .table-responsive>.table>tfoot>tr>th,
+  .table-responsive>.table>thead>tr>td,
+  .table-responsive>.table>thead>tr>th {
+    white-space: normal !important;
+  }
+
+  .table-responsive .table {
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/*
+ * Blockquote
+ */
+blockquote {
+  font-size: 14px;
+}
+
+.article-comment-link, .twitter-share-button {
+  cursor: pointer;
+  float: right;
+  margin-left: 20px;
 }
