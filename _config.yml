@@ -1,21 +1,25 @@
 # Header
 navbar_brand: 可愛いを叫ぶブログ
 menu:
+  - title: Top
+    url: index.html
+    intro: "ブログトップ"
+    icon: "fa fa-home fa-lg"
   - title: Archives
     url: archives
-    intro: "All the articles."
+    intro: "過去の記事"
     icon: "fa fa-archive"
   - title: Categories
     url: categories
-    intro: "All the categories."
+    intro: "カテゴリー一覧"
     icon: "fa fa-folder"
   - title: Tags
     url: tags
-    intro: "All the tags."
+    intro: "タグ一覧"
     icon: "fa fa-tags"
   - title: About
     url: about
-    intro: "About me."
+    intro: "このブログについて"
     icon: "fa fa-user"
   # Home: index.html
   # Archives: archives/
@@ -36,7 +40,7 @@ widgets:
 - tagcloud
 - archive
 about_widget_content: >
-  <p>しらきが可愛いと思うものを可愛いと叫ぶためのブログです。</p>
+  <p>しらきが可愛いと思うものを可愛いと叫ぶためのブログです。</br>ほぼ藤田咲さん。</p>
 
 # widget behavior
 archive_type: 'monthly'
