@@ -18,8 +18,10 @@
 }
 
 body {
-  font-family: minmoji, Arial, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
-  color: #555;
+  /*font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif, minmoji, 'Helvetica Neue', 'Helvetica', 'Arial', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;*/
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  /*font-family: minmoji, 'Helvetica Neue', 'Helvetica', 'Arial', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;*/
+  color: #222;
 }
 
 h1, .h1,
@@ -30,23 +32,43 @@ h5, .h5,
 h6, .h6 {
   margin-top: 1em;
   margin-bottom: 1.5em;
-  font-family: minmoji, Arial, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+  font-family: minmoji, 'Helvetica Neue', 'Helvetica', 'Arial', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
   font-weight: bold;
   color: #333;
 }
 
 .archive-article h1 {
-  font-size: 15px;
+  font-size: 2.1em;
 }
 
 .archive-article {
   margin: 5px 0;
 }
 
-h3 {
+.popular-posts-label h3 {
   padding: .25em 0 .25em .5em;
   border-left: 8px solid #80CEDD;
-  font-size: 20px;
+  border-bottom: 1px solid #80CEDD;
+  font-size: 1.5em;
+  margin-bottom: 1.5em;
+  margin-top: 1.5em;
+}
+
+.popular-posts-title h3 {
+  /*padding: .25em 0 .25em .5em;*/
+  border-left: 0px;
+  border-bottom: 0px;
+  font-size: 1em;
+  line-height: 1.42857143;
+  margin-bottom: 0.3em;
+  margin-top: 0em;
+}
+
+h3 {
+  padding: .27em 0 .27em .5em;
+  border-left: 8px solid #80CEDD;
+  border-bottom: 1px solid #80CEDD;
+  font-size: 1.5em;
   margin-bottom: 1.5em;
   margin-top: 1.5em;
 }
@@ -67,8 +89,12 @@ code {
   border-radius: 30px;
 }
 .btn-primary {
-  background-color: #428bca;
-  border-color: #337ab7;
+  background-color: #ffada0;
+  border-color: #FFA596;
+}
+.btn-primary:hover {
+  background-color: #FF8787;
+  border-color: #FF8F7D;
 }
 .nav-pills>li>a {
   border-radius: 30px;
@@ -169,11 +195,11 @@ code {
 .blog-title {
   margin-top: 30px;
   margin-bottom: 0;
-  font-size: 32px;
+  font-size: 30px;
   font-weight: normal;
 }
 .blog-description {
-  font-size: 20px;
+  font-size: 18px;
   color: #999;
 }
 
@@ -197,8 +223,8 @@ code {
  */
 
 .blog-main {
-  font-size: 15px;
-  line-height: 1.7;
+  font-size: 1em;
+  line-height: 1.74;
 }
 .blog-main > article:last-of-type {
   margin-bottom: 30px;
@@ -232,6 +258,9 @@ code {
   padding-left: 25px;
 }
 
+.sidebar-module-list li {
+margin-bottom: 5px;
+}
 
 /*
  * Blog posts
@@ -241,10 +270,18 @@ code {
   margin-bottom: 60px;
 }
 
+.article p {
+  font-size: 1em;
+  line-height: 1.875;
+  color: #21272d;
+  font-weight: 400;
+  margin: 0 0 1.5em;
+}
+
 .article-header h1 {
   margin-top: 0;
   margin-bottom: 5px;
-  font-size: 24px;
+  font-size: 1.7em;
 }
 .article-header h1 a {
   color: #333;
@@ -299,6 +336,9 @@ code {
   text-decoration: underline;
 }
 
+h4 {
+  font-size: 1.3em;
+}
 /*
  * Archives
  */
@@ -423,12 +463,28 @@ code {
  * Blockquote
  */
 blockquote {
-  font-size: 15px;
+  font-size: 1em;
   line-height: 1.7;
+  background-color: #f7f7f7;
 }
 
 .article-comment-link, .twitter-share-button {
   cursor: pointer;
   float: right;
   margin-left: 20px;
+}
+
+.local-search-title {
+  margin-top: 0em;
+  margin-bottom: 0.5em;
+}
+.search-result-title {
+  margin-bottom: 0em;
+}
+.search-keyword {
+  background: linear-gradient(transparent 0%, #ffff66 0%);
+}
+
+#local-search-input {
+  font-family: FontAwesome;
 }

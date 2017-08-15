@@ -1,6 +1,15 @@
 <article class="archive-article archive-type-<%= post.layout %>">
-  <header class="archive-article-header">
-    <%- partial('post/date', {class_name: 'archive-article-date', date_format: 'YYYY-MM-DD'}) %>
-    <%- partial('post/title', {class_name: 'archive-article-title'}) %>
+  <header class="article-header">
+    <%- partial('post/title', {class_name: 'article-title'}) %>
   </header>
+  <div class="article-meta">
+    <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+    <%- partial('post/category') %><%- partial('post/tag') %>
+    </div>
+    <%- post.excerpt %>
+    <% if (theme.excerpt_link){ %>
+      <p class="article-more-link">
+        <a class="btn btn-primary" href="<%- url_for(post.path) %>"><%= theme.excerpt_link %></a>
+      </p>
+    <% } %>
 </article>

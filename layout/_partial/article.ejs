@@ -5,14 +5,14 @@
   </header>
 
   <div class="article-meta">
-    <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+    <% if (post.date){ %><%- partial('post/date', {class_name: 'article-date', date_format: null}) %> <% } %>
     <% if (post.author){ %><div class="article-author"><%= post.author %></div><% } %>
     <%- partial('post/category') %>
   </div>
   <div class="article-inner">
 
     <div class="article-entry" itemprop="articleBody">
-      <% if (post.excerpt && index){ %>
+      <!-- <% if (post.excerpt && index){ %>
         <%- post.excerpt %>
         <% if (theme.excerpt_link){ %>
           <p class="article-more-link">
@@ -21,7 +21,8 @@
         <% } %>
       <% } else { %>
         <%- post.content %>
-      <% } %>
+      <% } %> -->
+      <%- post.content %>
     </div>
 
     <% if (!(post.excerpt && index)){ %>
@@ -41,8 +42,15 @@
       <%- partial('post/tag') %>
     </footer>
   </div>
-  <% if (!index){ %>
+  <% if (!index && is_post()){ %>
     <%- partial('post/nav') %>
+      <div class="popular-posts-label"><h3>
+        <i class="fa fa-info-circle"></i>
+        関連記事
+      </h3></div>
+      <%-
+        popular_posts({ maxCount: 5 , ulClass: 'popular-posts' , PPMixingRate: 0.2 , isDate: false , isImage: true , isExcerpt: false})
+      %>
   <% } %>
 
 </article>

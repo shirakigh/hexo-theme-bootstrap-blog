@@ -5,28 +5,35 @@ menu:
     url: index.html
     intro: "ブログトップ"
     icon: "fa fa-home fa-lg"
-  - title: Archives
-    url: archives
-    intro: "過去の記事"
-    icon: "fa fa-archive"
-  - title: Categories
-    url: categories
-    intro: "カテゴリー一覧"
-    icon: "fa fa-folder"
-  - title: Tags
-    url: tags
-    intro: "タグ一覧"
-    icon: "fa fa-tags"
   - title: About
     url: about
     intro: "このブログについて"
     icon: "fa fa-user"
+  - title: Archives
+    url: archives
+    intro: "過去の記事"
+    icon: "fa fa-archive"
+  # - title: Categories
+  #   url: categories
+  #   intro: "カテゴリー一覧"
+  #   icon: "fa fa-folder"
+  - title: Tags
+    url: tags
+    intro: "タグ一覧"
+    icon: "fa fa-tags"
+  - title: Search
+    url: search
+    intro: "サイト内検索"
+    icon: "fa fa-search"
   # Home: index.html
   # Archives: archives/
   # Categories: categories/
   # Tags: tags/
   # About: about/
 rss: /sblog/atom.xml
+# search:
+#   path: search.xml
+#   field: all
 
 # Content
 excerpt_link: Read More
@@ -35,9 +42,10 @@ fancybox: true
 # Sidebar
 widgets:
 - about         # See also: `about_content`
+- search
 - recent_posts
-- category
 - tagcloud
+- category
 - archive
 about_widget_content: >
   <p>しらきが可愛いと思うものを可愛いと叫ぶためのブログです。</br>ほぼ藤田咲さん。</p>
@@ -47,7 +55,8 @@ archive_type: 'monthly'
 show_count: true
 
 # Miscellaneous
-google_analytics: UA-84876135-2
+# google_analytics: UA-84876135-2
+google_analytics: UA-
 favicon: favicon.ico
 twitter_id: '@shiraki_ii'
 google_plus:
